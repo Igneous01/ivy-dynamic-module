@@ -8,7 +8,7 @@ export class AppComponent {
   title = 'ivy-dynamic-module';
   constructor(private injector: Injector) {}
   loadFeature() {
-    import('../app/feature/feature.component')
+    import('../feature/feature/feature.component')
       .then(({ FeatureComponent }) => {
         ɵrenderComponent(FeatureComponent, { host: 'my-container', injector: this.injector });
       });
