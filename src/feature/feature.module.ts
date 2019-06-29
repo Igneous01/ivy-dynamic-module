@@ -10,6 +10,7 @@ import { FeatureService } from './feature/feature.service';
     CommonModule,
     FeatureRoutingModule
   ],
-  declarations: [FeatureComponent, FeatureService]
+  declarations: [FeatureComponent],
+  providers: [FeatureService]
 })
 export class FeatureModule { }
