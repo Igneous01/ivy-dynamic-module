@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Injector, ɵrenderComponent } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'ivy-dynamic-module';
+  constructor(private injector: Injector) {}
+  loadFeature() {
+    import('../feature/feature/feature.component')
+      .then(({ FeatureComponent }) => {
+        ɵrenderComponent(FeatureComponent, { host: 'my-container', injector: this.injector });
+      });
+  }
 }
