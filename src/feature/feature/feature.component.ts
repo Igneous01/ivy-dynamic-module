@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FeatureService } from './feature.service';
 
 @Component({
   selector: 'app-feature',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeatureComponent implements OnInit {
 
-  constructor() { }
+  public text : string;
+
+  constructor(private featureService : FeatureService) {
+    this.text = this.featureService.load();
+  }
 
   ngOnInit() {
+    console.log("NgOnInit called");
   }
 
 }
