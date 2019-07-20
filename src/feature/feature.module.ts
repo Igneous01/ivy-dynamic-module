@@ -12,6 +12,7 @@ import { FeatureService } from './feature/feature.service';
     CommonModule,
     FeatureRoutingModule
   ],
+  bootstrap: [FeatureComponent],
   declarations: [FeatureComponent],
   providers: [FeatureService]
 })

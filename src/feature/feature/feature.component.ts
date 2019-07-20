@@ -3,7 +3,7 @@ import { FeatureService } from './feature.service';
 import { NewModuleServiceService } from 'src/app/new-module/new-module-service.service';
 
 @Component({
-  selector: 'app-feature',
+  selector: 'feature',
   templateUrl: './feature.component.html',
   styleUrls: ['./feature.component.css']
 })
