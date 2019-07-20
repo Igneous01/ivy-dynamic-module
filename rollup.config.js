@@ -1,12 +1,25 @@
+import typescript from 'rollup-plugin-typescript2';
+import angular from 'rollup-plugin-angular';
+
 export default {
-    input: 'build/index.js',
+    input: 'src/feature/feature.entry.ts',
     output: {
-        name: 'module',
-        file: 'dist/app.js',
         format: 'cjs',
-        globals: {
-            '@angular/core': 'ng.core',
-            '@angular/common': 'ng.common'
-        }
-    }
+        file: 'dist/feature.js',
+    },
+    plugins: [
+        angular(),
+        typescript(),
+    ],
+    external: [
+        '@angular/core',
+        '@angular/common',
+        '@angular/compiler',
+        '@angular/core',
+        '@angular/http',
+        '@angular/platform-browser',
+        '@angular/platform-browser-dynamic',
+        '@angular/router',
+        '@angular/router-deprecated'
+    ]
 }

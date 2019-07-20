@@ -29,15 +29,9 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.1",
-    "@angular/bazel": "^8.1.1",
     "@angular/cli": "~8.1.1",
     "@angular/compiler-cli": "^8.1.1",
     "@angular/language-service": "^8.1.1",
-    "@bazel/bazel": "^0.28.0",
-    "@bazel/hide-bazel-files": "0.33.1",
-    "@bazel/ibazel": "^0.10.3",
-    "@bazel/karma": "0.33.1",
-    "@bazel/typescript": "0.33.1",
     "@types/jasmine": "~3.3.13",
     "@types/jasminewd2": "~2.0.6",
     "@types/node": "~12.6.6",
@@ -50,8 +44,10 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "protractor": "~5.4.2",
+    "rollup-plugin-angular": "^0.5.3",
+    "rollup-plugin-typescript2": "^0.22.0",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "<3.5.0"
+    "typescript": "^3.5.3"
   }
 }

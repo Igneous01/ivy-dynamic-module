@@ -33,7 +33,7 @@ export class ManualCompileComponent implements AfterViewInit {
                 const componentFactory = factories.componentFactories[0];
                 // Create the component and add to the view.
                 // DOES NOT WORK
-                const componentRef = this.container.createComponent(componentFactory);
+                //const componentRef = this.container.createComponent(componentFactory);
             });
     }
 }

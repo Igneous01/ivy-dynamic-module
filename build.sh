@@ -9,13 +9,13 @@ rm -rf build
 rm -rf dist
 
 echo "Compile"
-ngc
+ng build
 
 echo "Bundle"
 rollup -c rollup.config.js
 
 echo "Deploy"
-cp build/*.d.ts dist/
+cp src/feature/* dist/
 
 echo '{"version": "0.0.1", "name": "app", "main": "app.js"}' > dist/package.json
 
